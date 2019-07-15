@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>
+	   亚特官网
+	</title>
+	<meta name="keywords" content="真石漆,多彩漆系列,岩片漆系列" />
+    <link href="../Skins/Default/Common.css" rel="stylesheet" type="text/css" />
+    <link href="../Skins/default/Style.css" rel="stylesheet" type="text/css" />
+    <link href="../Skins/default/temp.css" rel="stylesheet" type="text/css" />
+    <link href="css/css.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styless.css">
+    <script type="text/javascript" src="../JS/1.9.1jquery.min.js"></script>
+    <script type="text/javascript" src="../JS/Ajax.js"></script>
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+	<script src="https://cdn.bootcss.com/axios/0.14.0/axios.js"></script>
+	<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	<link href="../Skins/Default/quill.core.css" rel="stylesheet">
+	<link href="../Skins/Default/quill.bubble.css" rel="stylesheet">
+	<link href="../Skins/Default/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Header:Start-->
+
+    <!--头部开始-->
+    <script src="../js/cj_sdw_msw.js" type="text/javascript"></script>
+    <script src="../js/public.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../Skins/Default/inpage.css" />
+<div class="box" id="app" v-cloak>
+    <div class="header">
+        <div class="header_btm">
+            <div class="container">
+                <h1><a href="../index.html"><img  v-bind:src="data.logoPic" width="100" height="auto"></a></h1>
+                <!--<h2><img src="/Skins/Default/Img/Common/logo_w.png" width="179" height="38"></h2>-->
+                <ul class="nav">
+                    <li class="li01"><a href="../index.html">首页</a></li>
+                    <li><a href="aboutus.html">关于我们</a><img src="Skins/Default/Img/Common/header_s.png" width="20"
+                            height="8">
+                    </li>
+                    <li><a href="../cpfl.html?id=1">产品中心</a><img src="Skins/Default/Img/Common/header_s.png" width="20"
+                            height="8">
+                    </li>
+                    <li><a href="jmhz.html">经典案例</a><img src="Skins/Default/Img/Common/header_s.png" width="20"
+                            height="8">
+                    </li>
+                    <li><a href="../news/index.html">新闻中心</a><img src="Skins/Default/Img/Common/header_s.png" width="20"
+                            height="8">
+                    </li>
+                    <li><a href="tsjy.html">联系我们</a><img src="Skins/Default/Img/Common/header_s.png" width="20"
+                            height="8">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Header:End-->
+    <div class="topadcs"><a alt='' title=''
+            style='background:url(../UploadFiles/Others/20161222094351_15438.jpg) no-repeat center top;'></a>
+    </div>
+    <!--Content:Start-->
+    <div class="pageBox bg_fa">
+        <div class="AM1 ampt">
+            <div class="MainCon">
+                <div class="showContxt ql-editor" v-html="data.content"></div>
+            </div>
+        </div>
+        <div class="M1Con_1">
+            <div class="inner1">
+                <div class="MainCon">
+                    <div class="M1tit wow bounceInDown animated animated" style="visibility: visible; animation-name: bounceInDown;">
+                        <p>亚特漆涂料 行业知名品牌</p>
+                        <span>专业的服务，为您创作更高的价值</span>
+                    </div>
+                    <ul class="clearfix">
+                        <li>
+                            <p class="counter">20</p>
+                            <span>年专注低碳健康漆</span>
+                        </li>
+                        <li>
+                            <p class="counter">50000</p>
+                            <span>吨以上企业产量</span>
+                        </li>
+                        <li>
+                            <p class="counter">100000</p>
+                            <span>施工平方米数</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".a022").hover(function () {
+                $(".eemm").stop().fadeIn(500);
+            }, function () {
+                $(".eemm").stop().fadeOut(500);
+            })
+        })
+    </script>
+
+
+
+    <div class="float">
+     
+        <div class="float_show float_show1" style="right: -146px;">
+            <a href="javascript:;"><img width="48" height="48"
+                    src="../Skins/Default/Img/Common/float_icon2.png">{{data.mobile}}</a>
+        </div>
+        <div class="float_show float_show2" style="right: -199px;">
+            <a href=""><img width="48" height="48"
+                    src="../Skins/Default/Img/Common/float_icon3.png">{{data.email}}</a>
+        </div>
+
+        <div class="float_show float_show4">
+            <a href="javascript:;"><img width="48" height="48" src="../Skins/Default/Img/Common/float_icon5.png"></a>
+            <div class="float_wx" style="display: none;"><img width="144" height="144"
+                    v-bind:src="data.weChatPic"></div>
+        </div>
+    </div>
+    <iframe frameborder="0" scrolling="no" src="../footer.html" height="210px" width="100%" style="min-width:1200px;"></iframe>  
+  </div>  
+  
+  	<!--获取接口-->
+	<script src="../config.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				data:{}
+			},
+			methods: {
+				getData: function (url) {
+					let that = this;
+					axios({
+						method: 'get',
+						url: url
+					}).then((res) => {
+						that.data=res.data.data
+					}, function () {
+						console.log('请求失败');
+					});
+				}
+			},
+			created() {
+				this.getData("/getbaseConfig")
+			}
+		})
+	</script>
+  
+  
+    <script type="text/javascript">
+        function action() {
+            $(window).scroll(function () {
+                var st = $(document).scrollTop();
+                if (st > 500) {
+                    $('.float_show0').show();
+                } else {
+                    $('.float_show0').hide();
+                }
+            })
+
+            $('.float_show0 a').click(function () {
+                $('html,body').animate({
+                    'scrollTop': 0
+                }, 500);
+            });
+        }
+
+        $('.float_show1').hover(function () {
+            $(this).stop().animate({
+                'right': '0'
+            }, 450)
+
+        }, function () {
+
+            $(this).stop().animate({
+                'right': '-146px'
+            }, 450)
+
+        })
+
+        $('.float_show2').hover(function () {
+            $(this).stop().animate({
+                'right': '0'
+            }, 450)
+
+        }, function () {
+
+            $(this).stop().animate({
+                'right': '-199px'
+            }, 450)
+
+        })
+
+        $('.float_show4').hover(function () {
+
+            $(this).stop().find('.float_wx').fadeIn(350)
+
+        }, function () {
+
+            $(this).stop().find('.float_wx').fadeOut(350)
+
+        })
+    </script>
+</body>
+
+</html>
+<script type="text/javascript">
+    $(".header_btm .nav>li").eq(1).addClass("cur");
+</script>

@@ -1,0 +1,64 @@
+﻿<link href="Skins/Default/Common.css" rel="stylesheet" type="text/css" />
+<link href="Skins/Default/Index.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="Skins/Default/inpage.css" />
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+	<script src="https://cdn.bootcss.com/axios/0.14.0/axios.js"></script>
+	<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+<!-- 底部 -->
+	<div class="box" id="app" v-cloak>
+<div class="footerWrap">
+	<div class="containers">
+		<div class="footerTit">
+			<div class="Tits">
+				<div>
+					地址：{{data.address}}
+					<br>
+					<a target="_blank" href="http://icp.chinaz.com/info?q=js-yate.com"> 皖ICP备19009168号-1</a>
+				</div>
+			</div>
+		</div>
+		<div class="footerList">
+			<div class="about">
+				<ul>
+					<li>						
+					    <img v-bind:src="data.publicPic" width="120px;" style="margin-right:20px"/>
+					    <img v-bind:src="data.weChatPic" width="120px">
+					</li>				
+					<li>
+						<p>联系我们</p>
+						<a href="javascript:void(0)">7*24小时服务电话</a>
+						<span>{{data.mobile}}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+	<!--获取接口-->
+	<script src="config.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {			
+				data:{}
+			},
+			methods: {
+				getData: function (url) {
+					let that = this;
+					axios({
+						method: 'get',
+						url: url
+					}).then((res) => {
+						that.data=res.data.data
+					}, function () {
+						console.log('请求失败');
+					});
+				}
+			},
+			created() {
+				this.getData("/getbaseConfig")
+			}
+		})
+	</script>
