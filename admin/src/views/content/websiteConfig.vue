@@ -98,7 +98,7 @@
   </div>
 </template>
 <script>
-import { BASICURL, baseConfig, baseConfigUpdate } from "@/service/getData";
+import { BASEURL, baseConfig, baseConfigUpdate } from "@/service/getData";
 import { quillEditor } from "vue-quill-editor";
 import quillConfig from "../../libs/quill-config.js";
 const token = localStorage.getItem("token");
@@ -109,7 +109,7 @@ export default {
   },
   data() {
     return {
-      uploadUrl: BASICURL + "admin/upload",
+      uploadUrl: BASEURL + "admin/upload",
       logoPic: require("../../images/talkingdata.png"),
       weChatPic: require("../../images/talkingdata.png"),
       qqeweimaPic: require("../../images/talkingdata.png"),
@@ -162,19 +162,19 @@ export default {
       });
     },
     aliHandleSuccesslogoPic(res, file) {
-      this.logoPic = BASICURL + res.ret_code;
+      this.logoPic = BASEURL + res.ret_code;
     },
     aliHandleSuccessweChatPic(res, file) {
-      this.weChatPic = BASICURL + res.ret_code;
+      this.weChatPic = BASEURL + res.ret_code;
     },
     aliHandleSuccessqqeweimaPic(res, file) {
-      this.qqeweimaPic = BASICURL + res.ret_code;
+      this.qqeweimaPic = BASEURL + res.ret_code;
     },
     aliHandleSuccessweiboPic(res, file) {
-      this.weiboPic = BASICURL + res.ret_code;
+      this.weiboPic = BASEURL + res.ret_code;
     },
     aliHandleSuccesspublicPic(res, file) {
-      this.publicPic = BASICURL + res.ret_code;
+      this.publicPic = BASEURL + res.ret_code;
     },
     sure() {
       let params = {};

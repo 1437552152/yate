@@ -106,7 +106,7 @@
 </template>
 <script>
 
-import { getAllCoin, queryOtcCoin, addOtcCoin, setPlatformCoin,updateOtcCoin, delOtcCoin,BASICURL } from "@/service/getData";
+import { getAllCoin, queryOtcCoin, addOtcCoin, setPlatformCoin,updateOtcCoin, delOtcCoin,BASEURL } from "@/service/getData";
 
 export default {
   name: "CoinManage",
@@ -121,7 +121,7 @@ export default {
     return {
         add:false,
         imgUrl:"",
-        basicUrl: BASICURL,
+        BASEURL: BASEURL,
         ShowCoinImg:false,
         selectArr: [],
         nameCnStatus: false,

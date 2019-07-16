@@ -69,7 +69,7 @@ import {
   forbiddenMember,
   forbiddenMemberTrans,
   OutExcel,
-  BASICURL
+  BASEURL
 } from "@/service/getData";
 import { BASEURL } from "@/service/http.js";
 

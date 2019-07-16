@@ -1,5 +1,5 @@
 import {
-    BASICURL,
+    BASEURL,
     teamdetail,
     teamdeupdate,
     country,
@@ -28,7 +28,7 @@ Quill.register(Size, true);
 Quill.register(Font, true);
 /*富文本编辑图片上传配置*/
 const uploadConfig = {
-    action:  BASICURL + "admin/upload", // 必填参数 图片上传地址
+    action:  BASEURL + "admin/upload", // 必填参数 图片上传地址
     methods: 'POST', // 必填参数 图片上传方式
     token: localStorage.getItem("token"), // 可选参数 如果需要token验证，假设你的token有存放在sessionStorage
     name: 'picUrl', // 必填参数 文件的参数名
@@ -116,7 +116,7 @@ const handlers = {
                         var res = JSON.parse(xhr.responseText);
                         let length = self.quill.getSelection(true).index;
                         //这里很重要，你图片上传成功后，img的src需要在这里添加，res.path就是你服务器返回的图片链接。            
-                        self.quill.insertEmbed(length, 'image', BASICURL + res.ret_code);
+                        self.quill.insertEmbed(length, 'image', BASEURL + res.ret_code);
                         self.quill.setSelection(length + 1)
                     }
                     fileInput.value = ''

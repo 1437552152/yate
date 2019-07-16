@@ -61,7 +61,7 @@
 import {
  carouselConfigdelete,
   carouselConfiglist,
-  BASICURL,
+  BASEURL,
   carouselConfigUpdate,
   carouselConfigdetail,
   carouselConfigadd
@@ -76,7 +76,7 @@ export default {
       id: 0,
       addModal: false,
       UPModal: false,
-      uploadUrl: BASICURL + "admin/upload",
+      uploadUrl: BASEURL + "admin/upload",
       img:require("../../images/talkingdata.png"),  
       formItem: {
         title: "",
@@ -249,7 +249,7 @@ export default {
       this.UPModal = false;
     },
     aliHandleSuccess(res, file) {
-      this.img = BASICURL + res.ret_code;
+      this.img = BASEURL + res.ret_code;
     },
     changePage(pageIndex) {
       this.currentPageIdx = pageIndex;

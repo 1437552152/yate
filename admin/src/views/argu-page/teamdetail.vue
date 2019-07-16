@@ -45,7 +45,7 @@
 import { quillEditor } from "vue-quill-editor";
 import quillConfig from "../../libs/quill-config.js";
 import {
-  BASICURL,
+  BASEURL,
   teamdetail,
   teamdeupdate,
   country,
@@ -62,7 +62,7 @@ export default {
     return {
       content: "",
       quillOption: quillConfig,
-      uploadUrl: BASICURL + "admin/upload",
+      uploadUrl: BASEURL + "admin/upload",
       pic: require("../../images/talkingdata.png"),
       myHeaders: {token: token},
       countrydata: null,
@@ -129,7 +129,7 @@ export default {
       console.log("value===>",value)
     },
     aliHandleSuccess(res, file) {
-       this.pic = BASICURL + res.ret_code;
+       this.pic = BASEURL + res.ret_code;
     },
     clearValue(){
       this.formValidate.type="";

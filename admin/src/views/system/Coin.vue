@@ -65,7 +65,7 @@
 							</FormItem>
                             <FormItem label="币种图标:" class='coinImg'>
                                 <img :src="coinForm.imgUrl" alt="币种图标" v-show = "ShowCoinImg">
-								<Upload :action="basicUrl+'admin/common/upload/oss/image'"
+								<Upload :action="BASEURL+'admin/common/upload/oss/image'"
 										:on-success = 'uploadSuccessed'
                                              
                                                 :show-upload-list = "false">
@@ -252,13 +252,13 @@
 <script>
 import Cookies from 'js-cookie'
 import { getStore, setStore, removeStore } from '@/config/storage'
-import { addCoinWallet, ifExistWallet, tansTimeout, transferColdWallet, getColdWalletCode, setPlatformCoin, coinReviseSys, employeeDetail, querySysCoin, addSysCoin, updateSysCoin, sysCoinDetail ,BASICURL} from '@/service/getData'
+import { addCoinWallet, ifExistWallet, tansTimeout, transferColdWallet, getColdWalletCode, setPlatformCoin, coinReviseSys, employeeDetail, querySysCoin, addSysCoin, updateSysCoin, sysCoinDetail ,BASEURL} from '@/service/getData'
 
 export default {
   data() {
     return {
             ModalTitle:'',
-            basicUrl: BASICURL,
+            BASEURL: BASEURL,
 			needCord: true,
 			enableTransferCoin: 0,
 			coldWalletForm: {

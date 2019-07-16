@@ -85,7 +85,7 @@
 						<img :src="remitFrom.paymentInstrument" alt="打款凭证">
 					</FormItem>
 					<FormItem>
-						<Upload :action="basicUrl+'admin/common/upload/oss/image'"
+						<Upload :action="BASEURL+'admin/common/upload/oss/image'"
 										:on-success = 'uploadSuccessed'
 										:on-error = "uploadFailed"
 										:on-progress = "uploading"
@@ -110,14 +110,14 @@
 </template>
 <script>
 
-import { withdrawOtcCoin,	withdrawOtcCoinDetail, withdrawOtcCoinPass,	withdrawOtcCoinNoPass, withdrawOtcCoinRemit, legalOtcCoin, BASICURL } from "@/service/getData";
+import { withdrawOtcCoin,	withdrawOtcCoinDetail, withdrawOtcCoinPass,	withdrawOtcCoinNoPass, withdrawOtcCoinRemit, legalOtcCoin, BASEURL } from "@/service/getData";
 
 export default {
   name: "RechargeManage",
   data() {
     return {
 			uploadPercent: null,
-			basicUrl: BASICURL,
+			BASEURL: BASEURL,
 			remitFrom: {
 				id: '',
 				paymentInstrument: '',

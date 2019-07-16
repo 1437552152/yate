@@ -67,7 +67,7 @@
 import smeditor from "@/SMEditor/SMEditor.vue";
 
 import {
-  BASICURL,
+  BASEURL,
   addHelpManage,
   helpManageDetail,
   addAnnounce,
@@ -87,9 +87,9 @@ export default {
       klass: null,
       status: 0,
       statusLang: "zh",
-      basicUrl: BASICURL,
+      BASEURL: BASEURL,
       config: {
-        uploadUrl: `${BASICURL}admin/common/upload/oss/image`,
+        uploadUrl: `${BASEURL}admin/common/upload/oss/image`,
         uploadName: "file",
         parentName: "announce",
         uploadParams: {},

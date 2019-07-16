@@ -43,7 +43,7 @@ import Cookies from "js-cookie";
 import store from "../store";
 
 import { setStore, getStore, removeStore } from "@/config/storage";
-import { BASICURL, Login } from "@/service/getData";
+import { BASEURL, Login } from "@/service/getData";
 
 export default {
   data() {

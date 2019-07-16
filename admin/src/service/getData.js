@@ -1,13 +1,14 @@
 import {
-    BASEURL,
     fetch,
     post,
+    BASEURL,
     patch,
     put,
     postConfig
-} from './http.js'
+} from './http.js';
 
-export const BASICURL = BASEURL;
+console.log("21212",BASEURL)
+export const BASEURL = BASEURL;
 //post登陆接口
 export const Login = data => post('admin/login', data);
 //post "用户管理" => "用户详情"

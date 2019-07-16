@@ -116,8 +116,8 @@
 					</div>
 
         <div><i>*</i> 广告图片：
-          <!-- <Upload :action="basicUrl+'admin/common/upload/local/image'" -->
-          <Upload :action="basicUrl+'admin/common/upload/oss/image'"
+          <!-- <Upload :action="BASEURL+'admin/common/upload/local/image'" -->
+          <Upload :action="BASEURL+'admin/common/upload/oss/image'"
                   :on-success = 'uploadSuccessed'
                   :on-error = "uploadFailed"
                   :on-progress = "uploading"
@@ -173,7 +173,7 @@ import {
   adDetail,
   updateAd,
   uploadPic,
-  BASICURL
+  BASEURL
 } from "@/service/getData";
 import { getStore } from "@/config/storage";
 
@@ -188,7 +188,7 @@ export default {
       ifDelete: false,
       ifShowPercentCircle: false,
       percentage: 0,
-      basicUrl: BASICURL,
+      BASEURL: BASEURL,
       ifLoading: true,
       adSerialNumber: null,
       adName: null,

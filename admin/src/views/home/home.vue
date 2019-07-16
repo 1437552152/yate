@@ -7,7 +7,7 @@
 
 <script>
 import {
-  BASICURL,
+  BASEURL,
   getLookRecord
 } from "@/service/getData";
 export default {

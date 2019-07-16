@@ -172,14 +172,14 @@
 <script>
 import qs from 'qs';
 import { setStore, getStore, removeStore } from "@/config/storage.js";
-import { queryOtcOrder, coinOutExcel, BASICURL, getCoinName } from "@/service/getData";
+import { queryOtcOrder, coinOutExcel, BASEURL, getCoinName } from "@/service/getData";
 
 export default {
   name: "OrderManage",
   data() {
     return {
 			seniorSearch: false,
-			aLink: `${BASICURL}admin/otc/order/out-excel`,
+			aLink: `${BASEURL}admin/otc/order/out-excel`,
 			coinSearchArr: [],
 			sortSearch: {
 				direction: [],
@@ -342,7 +342,7 @@ export default {
 		},
 		searchByFilter() {
 			let obj = Object.assign({ pageNo: 1, pageSize: 10}, this.filterSearch);
-			this.aLink = `${BASICURL}admin/otc/order/out-excel?${qs.stringify(obj)}`;
+			this.aLink = `${BASEURL}admin/otc/order/out-excel?${qs.stringify(obj)}`;
 			this.refreshPage(obj)
 		},
 		selectionChange(selection) {

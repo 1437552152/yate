@@ -74,14 +74,14 @@
 
 <script>
 import qs from "qs";
-import { BASICURL, queryRecommend, recommendOutExcel } from "@/service/getData";
+import { BASEURL, queryRecommend, recommendOutExcel } from "@/service/getData";
 import { setStore, getStore, removeStore } from "@/config/storage";
 
 export default {
   name: "TransferAddress",
   data() {
     return {
-      aLink: `${BASICURL}admin/promotion/member/out-excel`,
+      aLink: `${BASEURL}admin/promotion/member/out-excel`,
       coinNameArr: [],
       filterSearch: {
         account: "",
@@ -174,7 +174,7 @@ export default {
   },
   methods: {
     searchByFilter() {
-        this.aLink = `${BASICURL}admin/promotion/member/out-excel?${qs.stringify(
+        this.aLink = `${BASEURL}admin/promotion/member/out-excel?${qs.stringify(
             this.filterSearch
         )}`;
         this.currentPageIdx = this.filterSearch.pageNo = 1;

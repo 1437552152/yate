@@ -48,7 +48,7 @@
 </template>
 <script>
 import {
-  BASICURL,
+  BASEURL,
   newsdetail,
   newsUpdate,
   newsadd,
@@ -64,7 +64,7 @@ export default {
   },
   data() {
     return {
-      uploadUrl: BASICURL + "admin/upload",
+      uploadUrl: BASEURL + "admin/upload",
       pic: require("../../images/talkingdata.png"),
         myHeaders: {token: token},
       countrydata: null,
@@ -133,7 +133,7 @@ export default {
       this.article = value.html;
     },
     aliHandleSuccess(res, file) {
-      this.pic = BASICURL + res.ret_code;
+      this.pic = BASEURL + res.ret_code;
     },
     handleReset(name) {
       this.$refs[name].resetFields();
