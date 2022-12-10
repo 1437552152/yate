@@ -8,7 +8,7 @@
     "consolidate": "^0.15.1",
     "cookies": "^0.7.3",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-generator": "^4.16.0",
     "express-ws": "^4.0.0",
     "formidable": "^1.2.1",
